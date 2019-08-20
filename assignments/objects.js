@@ -109,11 +109,14 @@ console.log(parent.child.age);
 // Log the name and age of the grandchild
 console.log(parent.child.grandchild);
 // Have the parent speak
-parent.speak = ()=>`Hello my name is ${this.name}!`;
+
+parent.speak = function(){return `Hello my name is ${this.name}!`};
 console.log(parent.speak());
 // Have the child speak
-parent.child.speak = ()=>`Hello my name is ${this.name}!`;
+
+parent.child.speak = function(){return `Hello my name is ${this.name}!`};
 console.log(parent.child.speak());
-// Have the grandchild speak
-parent.child.grandchild.speak = ()=>`Hello my name is ${this.name}!`;
+// // Have the grandchild speak
+
+parent.child.grandchild.speak = function(){return `Hello my name is ${this.name}!`};
 console.log(parent.child.grandchild.speak());
